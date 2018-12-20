@@ -72,8 +72,7 @@ int main() {
     }
   }
 
-  // Print UDT fields
-  {
+  { // Print UDT fields
     DsRow row = ds_row_init(rs);
     if (ds_row_is_valid(&row)) {
       // CREATE TYPE cycling.basic_info ( birthday timestamp, nationality text, weight text, height text);
@@ -98,7 +97,7 @@ int main() {
     }
   }
 
-  // Print UDT specific UDT value
+  { // Print UDT specific UDT value
     DsRow row = ds_row_init(rs);
     if (ds_row_is_valid(&row)) {
       // CREATE TYPE cycling.basic_info ( birthday timestamp, nationality text, weight text, height text);
@@ -107,4 +106,5 @@ int main() {
       DsValue birthday = ds_value_field_by_name(&basic_info, "birthday");
       printf("%s: %ld\n", ds_value_name(&birthday), ds_value_get_int64(&birthday));
     }
+  }
 }

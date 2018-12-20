@@ -18,8 +18,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#ifndef DATASTAX_HPP
-#define DATASTAX_HPP
+#ifndef DATASTAX_H
+#define DATASTAX_H
 
 typedef struct DsResult_ DsResultSet;
 typedef struct DsValueDefinition_ DsValueDefinition;
@@ -191,7 +191,6 @@ bool ds_value_is_null(const DsValue* value);
  */
 bool ds_value_is_collection(const DsValue* value);
 
-
 /**
  * Get name of the current value, if applicable. Get's the column name for
  * column values and field name for UDT values. Returns NULL if not a column or
@@ -249,4 +248,4 @@ size_t ds_value_get_string_length(const DsValue* value);
  */
 size_t ds_value_get_string(const DsValue* value, char* string, size_t string_length);
 
-#endif // DATASTAX_HPP
+#endif // DATASTAX_H
